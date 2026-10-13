@@ -1,1 +1,176 @@
+# Physical Verification Using SKY130A
 
+## 1. Project Overview
+
+This project demonstrates the physical verification of CMOS circuits using the open-source SKY130A process design kit (PDK) and VLSI Electronic Design Automation (EDA) tools.
+The project focuses on designing circuit schematics, creating physical layouts, identifying design-rule violations, and verifying that the physical layout matches the original circuit schematic.
+The main objective is to understand the practical physical verification workflow used in VLSI design.
+
+## 2. Objectives
+
+- Understand the SKY130A technology and its design rules.
+- Design basic CMOS circuits using schematic capture tools.
+- Create transistor-level physical layouts.
+- Perform Design Rule Checking (DRC).
+- Perform Layout Versus Schematic (LVS) verification.
+- Analyze verification errors and correct layout issues.
+- Document the results with screenshots and reports.
+
+## 3. Tools and Technologies
+
+| Tool | Purpose |
+| Magic VLSI | Physical layout design and DRC |
+| Netgen | Layout Versus Schematic verification |
+| Xschem | Circuit schematic design |
+| ngspice | SPICE circuit simulation |
+| SKY130A PDK | Process technology files and design rules |
+| Ubuntu on WSL2 | Linux development environment |
+| Git and GitHub | Version control and project sharing |
+
+*Note: Tool availability and configuration depend on the installed environment.*
+
+## 4. Project Workflow
+
+1. Configure the SKY130A technology environment.
+2. Draw the circuit schematic using Xschem.
+3. Generate the SPICE netlist.
+4. Simulate circuit behavior using ngspice.
+5. Create the physical layout using Magic.
+6. Run Design Rule Checking (DRC).
+7. Extract the layout netlist.
+8. Compare the extracted netlist with the reference schematic using Netgen.
+9. Correct errors and repeat verification.
+10. Save screenshots, logs, and final results.
+
+## 5. Experiments
+
+### Experiment 1: CMOS Inverter
+
+**Objective:** Design and verify a CMOS inverter.
+
+Tasks:
+- Create the schematic using PMOS and NMOS transistors.
+- Generate the SPICE netlist.
+- Simulate the inverter response.
+- Create the physical layout.
+- Run DRC and LVS.
+
+**Results:** To be added after completing the experiment.
+
+### Experiment 2: CMOS AND Gate
+
+**Objective:** Design and verify a two-input AND gate.
+
+Tasks:
+- Construct the circuit using an appropriate CMOS implementation.
+- Verify its truth table through simulation.
+- Create the physical layout.
+- Perform physical verification.
+
+**Results:** To be added after completing the experiment.
+
+### Experiment 3: Design Rule Checking (DRC)
+
+**Objective:** Identify and correct physical layout design-rule violations.
+
+Tasks:
+- Run DRC on the layout.
+- Examine reported violations.
+- Correct the layout geometry.
+- Repeat the checks and record the final result.
+
+**Results:** To be added after completing the experiment.
+
+### Experiment 4: Layout Versus Schematic (LVS)
+
+**Objective:** Verify the electrical equivalence of the layout and schematic.
+
+Tasks:
+- Generate the reference schematic netlist.
+- Extract the layout netlist.
+- Run the LVS comparison.
+- Analyze mismatches and correct connectivity issues.
+
+**Results:** To be added after completing the experiment.
+
+## 6. Repository Structure
+
+```text
+Physical_Verification_SKY130A/
+├── README.md
+├── Lab1_inverter/
+│   ├── xschem/
+│   ├── mag/
+│   ├── simulation/
+│   ├── netgen/
+│   └── screenshots/
+├── Lab2_and/
+│   ├── xschem/
+│   ├── mag/
+│   ├── netgen/
+│   └── screenshots/
+├── Lab3_drc/
+│   ├── layouts/
+│   ├── violations/
+│   └── screenshots/
+├── Lab4_lvs/
+│   ├── schematic_netlist/
+│   ├── layout_netlist/
+│   ├── reports/
+│   └── screenshots/
+└── Resources/
+    ├── tool_setup.md
+    ├── commands.md
+    └── references.md
+```
+
+## 7. Verification Results
+
+The verification results will be documented for each experiment.
+
+| Experiment | Verification | Status |
+|---|---|---|
+| CMOS Inverter | DRC and LVS | Pending |
+| CMOS AND Gate | DRC and LVS | Pending |
+| DRC Analysis | Layout rule checks | Pending |
+| LVS Analysis | Netlist comparison | Pending |
+
+Update the status only after running the relevant tools and examining their outputs.
+
+## 8. Screenshots and Reports
+
+The following evidence will be added as the experiments are completed:
+
+- Circuit schematic screenshots
+- Simulation waveforms
+- Physical layout screenshots
+- DRC reports
+- LVS comparison reports
+- Corrected layouts and final verification results
+
+Screenshots will be stored in the corresponding experiment folders.
+
+## 9. Learning Outcomes
+
+Through this project, the following concepts will be explored:
+
+- CMOS circuit design and simulation
+- VLSI physical layout fundamentals
+- Technology-specific design rules
+- Physical verification using DRC
+- Electrical connectivity verification using LVS
+- Linux-based EDA workflows
+- Version control and technical documentation
+
+## 10. References
+
+- Reference project: https://github.com/yathAg/Physical_Verification_SKY130A
+- Magic VLSI: http://opencircuitdesign.com/magic/
+- Netgen: http://opencircuitdesign.com/netgen/
+- Xschem: https://github.com/StefanSchippers/xschem
+- ngspice: https://ngspice.sourceforge.io/
+- SKY130 Open_PDKs: https://github.com/fossi-foundation/open-pdks
+
+## 11. Disclaimer
+
+This repository is intended for educational purposes. Verification results will be reported based on the actual experiments performed in the configured environment.
