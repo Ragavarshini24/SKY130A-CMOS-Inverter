@@ -1,7 +1,26 @@
 # Physical-Verification-using-SKY130
+## 1.Project Overview  
+This repository documents my progress in the SKY130 Physical Verification Lab, focusing on the design and verification of a CMOS inverter using open-source VLSI tools.
+The lab uses the SkyWater 130 nm Process Design Kit (PDK) to understand the basic design flow, schematic creation, circuit simulation, layout design, Design Rule Checking (DRC), and Layout Versus Schematic (LVS) verification.
+## 2.Objectives
+Understand the SKY130 PDK and CMOS inverter operation.  
+Set up and verify the required open-source EDA tools.  
+Create a CMOS inverter schematic using Xschem.  
+Perform pre-layout simulation using Ngspice.  
+Design the inverter layout using Magic.  
+Perform DRC and LVS checks.  
+Study post-layout simulation and parasitic extraction. 
+## 3. Tools and Environment
+Operating System: Ubuntu/Linux  
+Technology: SkyWater SKY130A  
+Schematic Editor: Xschem  
+Layout Editor: Magic  
+Circuit Simulator: Ngspice  
+Verification Tool: Netgen  
+
 ## Table of Contents
 
-## Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools
+## Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools1
 
 ### SkyWater PDK
 The SkyWater open PDK public repository and documentation link:
