@@ -13,18 +13,18 @@ Study post-layout simulation and parasitic extraction.
 ## 3. Tools and Environment
 Operating System: Ubuntu/Linux  
 Technology: SkyWater SKY130A  
-Schematic Editor: Xschem  
+Schematic Editor: xschem  
 Layout Editor: Magic  
 Circuit Simulator: Ngspice  
 Verification Tool: Netgen  
 ## Getting the tools
 To adequately utilize the open source skywater130 pdk and understand the design flow, we first require to install all the tools, which are  
-open_pdk
-magic
-ngspice
-xschem
-netgen
-(<img width="1023" height="541" alt="toolchains" src="https://github.com/user-attachments/assets/33398e76-fa58-4ff8-8043-f18d27026a55" />)
+open_pdk 
+magic 
+ngspice 
+xscheme 
+netgen 
+<img width="1023" height="541" alt="toolchains" src="https://github.com/user-attachments/assets/33398e76-fa58-4ff8-8043-f18d27026a55" />
 
 
 ## Table of Contents
