@@ -19,21 +19,69 @@ Circuit Simulator: Ngspice
 Verification Tool: Netgen  
 ## Getting the tools
 To adequately utilize the open source skywater130 pdk and understand the design flow, we first require to install all the tools, which are  
-open_pdk 
-magic 
-ngspice 
-xscheme 
-netgen 
+open_pdk  
+magic  
+ngspice  
+xscheme  
+netgen  
 <img width="1023" height="541" alt="toolchains" src="https://github.com/user-attachments/assets/33398e76-fa58-4ff8-8043-f18d27026a55" />
+## Magic  
+Magic is an open-source VLSI layout tool.  
+Install steps:
+```
+$  git clone git://opencircuitdesign.com/magic
+$  cd magic
+$	 ./configure
+$  make
+$  sudo make install
+```
+## Netgen  
+Netgen is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic"
+Install steps:  
+```
+$  git clone git://opencircuitdesign.com/netgen
+$  cd netgen
+$	./configure
+$  make
+$  sudo make install
+```
+Xschem  
+Xschem is a schematic capture program  
+Install   
+```
+$  git clone https://github.com/StefanSchippers/xschem.git xschem_git
+$	./configure
+$  make
+$  sudo make install
+```
+## Ngspice
+ngspice is the open-source spice simulator for electric and electronic circuits.  
+Install steps:   
+After downloading the tarball from  
+https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:  
+```
+ $ tar -zxvf ngspice-37.tar.gz
+ $ cd ngspice-37
+ $ mkdir release
+ $ cd release
+ $ ../configure  --with-x --with-readline=yes --disable-debug
+ $ make
+ $ sudo make install
+```
+
+
+
+
 
 
 ## Table of Contents
 
-## Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools1
+## Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools 1
 
 ### SkyWater PDK
 The SkyWater open PDK public repository and documentation link:
  - [Documentation](https://skywater-pdk.rtfd.io/) 
+:
  - [PDK Library and files](https://github.com/google/skywater-pdk)
 
 Steps to  install SKY130 PDKs and openpdk:
