@@ -103,14 +103,21 @@ Convert the schematic to a symbol.Using the symbol, we can create an independent
 The circuit can be simulated in ngspice.  
 <img width="872" height="445" alt="Schematic_simulation(ip vs op)" src="https://github.com/user-attachments/assets/a6c6f7f1-b2ab-4e82-99aa-ad5f20525b68" />
 
-
-
-#### Layout Design and Postlayout simulation
+## Creating inverter layout in Magic and exporting its netlist   
+The original schematic can be used to export a netlist, which can be imported into magic to create the layout.    
 - Layout imported from spice file: file -> import spice
-![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/spice2mag.png)
+![]
+<img width="662" height="383" alt="spice2mag" src="https://github.com/user-attachments/assets/0d95102b-18c0-414c-bc3c-354376e6c7e9" />
 
 - Layout after connecting pins
-![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/final_layout.png)
+![]
+<img width="572" height="301" alt="final_layout" src="https://github.com/user-attachments/assets/9806fe8e-2f1a-4dab-976f-7410262add03" />
+
+- Inverter layout
+<img width="794" height="442" alt="inv_layout" src="https://github.com/user-attachments/assets/a743ce14-450c-46fb-b6db-a0bfcd207f81" />
 
 - Postlayout simulation result
-![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Post_layout_simulation.png)
+![]
+<img width="325" height="233" alt="Post_layout_simulation" src="https://github.com/user-attachments/assets/d942991e-ab08-4b59-ae3d-f58399018b2c" />
+
+
