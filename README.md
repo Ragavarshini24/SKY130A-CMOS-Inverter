@@ -97,10 +97,15 @@ Checking if Xscheme works
 An initial schematic is made by placing components from the open_pdk library
 The required changes to the properties of the device can be made here and will automatically reflect in the layout  
 <img width="763" height="411" alt="Inverter_schematic" src="https://github.com/user-attachments/assets/0e66cf4c-e29d-4b37-9a94-36552a44e469" />
+Convert the schematic to a symbol.Using the symbol, we can create an independent test bench to simulate the circuit.   
+<img width="803" height="387" alt="Inverter_schem" src="https://github.com/user-attachments/assets/4b378a55-c9ac-46e2-b059-3b6363c36d07" />
+## Creating and simulating testbench Schematic   
+The circuit can be simulated in ngspice.  
+![Uploading Schematic_simulation(ip vs op).png…]()
 
 
-- Inverter testbench
-![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_tb.png)
+
+
 
 - Inverter testbench spice file:
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/inverter_tb_spice.png)
