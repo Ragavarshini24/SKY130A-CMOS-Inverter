@@ -90,7 +90,7 @@ Checking if Magic works
 <img width="1920" height="1080" alt="Magic vlsi layout tool" src="https://github.com/user-attachments/assets/dee1cfb3-1491-4d01-9544-f93b30296397" />
 
 
-Checking if Xscheme works
+Checking if Xschem works
 <img width="1920" height="1080" alt="Xschem_launch" src="https://github.com/user-attachments/assets/fa911b45-44d3-4512-b2d1-3c42ffcda9d9" />
 
 ## Creating inverter schematic using xschem
