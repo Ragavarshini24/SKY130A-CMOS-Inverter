@@ -31,10 +31,10 @@ Lab_inverter/
 ## Getting the tools
 To adequately utilize the open source skywater130 pdk and understand the design flow, we first require to install all the tools, which are  
 open_pdk  
--magic  
--ngspice  
--xscheme  
--netgen  
+- magic  
+- ngspice  
+- xscheme  
+- netgen  
 <img width="1023" height="541" alt="toolchains" src="https://github.com/user-attachments/assets/33398e76-fa58-4ff8-8043-f18d27026a55" />
 ## Magic  
 Magic is an open-source VLSI layout tool.  
