@@ -16,7 +16,18 @@ Technology: SkyWater SKY130A
 Schematic Editor: xschem  
 Layout Editor: Magic  
 Circuit Simulator: Ngspice  
-Verification Tool: Netgen  
+Verification Tool: Netgen 
+
+## Repository Structure
+
+Lab_inverter/
+├── xschem/
+├── mag/
+├── ngspice/
+├── netgen/
+└── screenshots/
+
+
 ## Getting the tools
 To adequately utilize the open source skywater130 pdk and understand the design flow, we first require to install all the tools, which are  
 open_pdk  
