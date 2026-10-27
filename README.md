@@ -18,16 +18,6 @@ The lab uses the SkyWater 130 nm Process Design Kit (PDK) to understand the basi
 - **Circuit Simulator:** Ngspice  
 - **Verification Tool:** Netgen 
 
-## Repository Structure
-
-Lab_inverter/   
-├── xschem/    
-├── mag/   
-├── ngspice/   
-├── netgen/   
-└── screenshots/   
-
-
 ## Getting the tools
 To adequately utilize the open source skywater130 pdk and understand the design flow, we first require to install all the tools, which are  
 open_pdk  
