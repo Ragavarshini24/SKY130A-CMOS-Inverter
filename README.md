@@ -20,12 +20,12 @@ Verification Tool: Netgen
 
 ## Repository Structure
 
-Lab_inverter/
-├── xschem/
-├── mag/
-├── ngspice/
-├── netgen/
-└── screenshots/
+Lab_inverter/   
+├── xschem/    
+├── mag/   
+├── ngspice/   
+├── netgen/   
+└── screenshots/   
 
 
 ## Getting the tools
