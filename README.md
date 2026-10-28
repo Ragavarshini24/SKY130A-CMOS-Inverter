@@ -139,5 +139,20 @@ $ Drc errors
 ```
 CMOS inverter physical layout in Magic using the Sky130A technology, with DRC verification showing zero errors.  
 
- <img width="1681" height="936" alt="TkCon Console Over IC Layout (1)" src="https://github.com/user-attachments/assets/e3dbbdfd-bb1d-4087-9a5c-777737195f5b" />                                                                                                                                                                                  
+ <img width="1681" height="936" alt="TkCon Console Over IC Layout (1)" src="https://github.com/user-attachments/assets/e3dbbdfd-bb1d-4087-9a5c-777737195f5b" />
+ 
+ ## Extraction from Magic
 
+Inside the Magic Console:
+
+```bash
+extract all
+extract2spice lvs
+extract2spice
+```
+## LVS — Layout vs Schematic
+LVS is performed using Netgen to verify that the physical layout matches the original circuit schematic. For this comparison, the SPICE netlist generated from Xschem is compared with the SPICE netlist extracted from the Magic layout to check whether the devices and electrical connections match.   
+``` bash
+cd ../netgen
+netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inverter"
+```
