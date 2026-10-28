@@ -139,15 +139,5 @@ $ Drc errors
 ```
 CMOS inverter physical layout in Magic using the Sky130A technology, with DRC verification showing zero errors.  
 
- <img width="1681" height="936" alt="TkCon Console Over IC Layout (1)" src="https://github.com/user-attachments/assets/e3dbbdfd-bb1d-4087-9a5c-777737195f5b" />           
-## Extraction from Magic        
-Inside the Magic Console:                            
-```
-$ extract all        
-$ extract2spice lvs          
-$ ext2spice
-```                        
-                                                                  
-
-
+ <img width="1681" height="936" alt="TkCon Console Over IC Layout (1)" src="https://github.com/user-attachments/assets/e3dbbdfd-bb1d-4087-9a5c-777737195f5b" />                                                                                                                                                                                  
 
