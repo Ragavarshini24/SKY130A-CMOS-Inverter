@@ -89,19 +89,23 @@ Now that we have all the necessary tools installed let's understand the design f
 ## Understanding the design flow
 ## Verifiying the open_pdk installation
 Checking if Magic works
+
 <img width="1920" height="1080" alt="Magic vlsi layout tool" src="https://github.com/user-attachments/assets/dee1cfb3-1491-4d01-9544-f93b30296397" />
 
 
 Checking if Xschem works
+
 <img width="1920" height="1080" alt="Xschem_launch" src="https://github.com/user-attachments/assets/fa911b45-44d3-4512-b2d1-3c42ffcda9d9" />
 
 ## Creating inverter schematic using xschem
 An initial schematic is made by placing components from the open_pdk library
 The required changes to the properties of the device can be made here and will automatically reflect in the layout  
-<img width="763" height="411" alt="Inverter_schematic" src="https://github.com/user-attachments/assets/0e66cf4c-e29d-4b37-9a94-36552a44e469" />
+<img width="1920" height="1080" alt="Screenshot 2026-10-27 161059" src="https://github.com/user-attachments/assets/d82bde59-0f9b-4338-9341-00962fc483e5" />
+
 
 Convert the schematic to a symbol.Using the symbol, we can create an independent test bench to simulate the circuit.   
-<img width="803" height="387" alt="Inverter_schem" src="https://github.com/user-attachments/assets/4b378a55-c9ac-46e2-b059-3b6363c36d07" />
+<img width="1920" height="1080" alt="Screenshot 2026-10-27 164553" src="https://github.com/user-attachments/assets/16fffcba-d832-4b38-827e-cde865135c04" />
+
 ## Creating and simulating testbench Schematic   
 The circuit can be simulated in ngspice.  
 <img width="872" height="445" alt="Schematic_simulation(ip vs op)" src="https://github.com/user-attachments/assets/a6c6f7f1-b2ab-4e82-99aa-ad5f20525b68" />
@@ -111,11 +115,11 @@ The original schematic can be used to export a netlist, which can be imported in
 - Layout imported from spice file: file -> import spice
 <img width="662" height="383" alt="spice2mag" src="https://github.com/user-attachments/assets/0d95102b-18c0-414c-bc3c-354376e6c7e9" />
 
-- Layout after connecting pins
-<img width="572" height="301" alt="final_layout" src="https://github.com/user-attachments/assets/9806fe8e-2f1a-4dab-976f-7410262add03" />
+- Layout setup
+<img width="1672" height="941" alt="layout setup" src="https://github.com/user-attachments/assets/9622ceaa-eebc-423d-aa60-21a79af3a76e" />
 
 - Inverter layout
-<img width="794" height="442" alt="inv_layout" src="https://github.com/user-attachments/assets/a743ce14-450c-46fb-b6db-a0bfcd207f81" />
+<img width="1672" height="941" alt="inverter layout" src="https://github.com/user-attachments/assets/98cc99e2-fe42-4e00-b9ef-2d50cb017d54" />
 
              
 ## DRC - Design Rule Check               
