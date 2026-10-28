@@ -116,12 +116,12 @@ The original schematic can be used to export a netlist, which can be imported in
 
 - Inverter layout
 <img width="794" height="442" alt="inv_layout" src="https://github.com/user-attachments/assets/a743ce14-450c-46fb-b6db-a0bfcd207f81" />
-## DRC - Design Rule Check
-Inside the Magic console
-```
-$  drc check
-$  drc count
-$  drc why
+## DRC - Design Rule Check            
+Inside the Magic console         
+```    
+$  drc check     
+$  drc count           
+$  drc why       
 ```
 
 
