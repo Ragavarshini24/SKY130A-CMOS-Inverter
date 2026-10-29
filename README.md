@@ -156,5 +156,15 @@ LVS is performed using Netgen to verify that the physical layout matches the ori
 cd ../netgen
 netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inverter"
 ```
-<img width="1671" height="840" alt="lvs" src="https://github.com/user-attachments/assets/2e62da1f-616a-4806-b80b-1fb4774eb1ac" />
+<img width="1671" height="840" alt="lvs" src="https://github.com/user-attachments/assets/2e62da1f-616a-4806-b80b-1fb4774eb1ac" />                  
+
+## Results
+
+| **Activity**      | **Result**           |
+|-------------------|----------------------|
+| Schematic Capture | Completed            |
+| Layout Design     | Created              |
+| DRC               | Zero errors reported |
+| LVS Comparison    | Circuit matches      |
+
 
