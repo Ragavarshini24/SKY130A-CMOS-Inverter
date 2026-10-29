@@ -8,8 +8,7 @@ The lab uses the SkyWater 130 nm Process Design Kit (PDK) to understand the basi
 - Create a CMOS inverter schematic using Xschem.  
 - Perform pre-layout simulation using Ngspice.  
 - Design the inverter layout using Magic.  
-- Perform DRC and LVS checks.  
-- Study post-layout simulation and parasitic extraction. 
+- Perform DRC and LVS checks.   
 ## 3. Tools and Environment
 - **Operating System:** Ubuntu/Linux  
 - **Technology:** SkyWater SKY130A  
