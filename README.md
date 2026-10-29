@@ -99,15 +99,12 @@ Checking if Xschem works
 ## Creating inverter schematic using xschem
 An initial schematic is made by placing components from the open_pdk library
 The required changes to the properties of the device can be made here and will automatically reflect in the layout  
-<img width="1920" height="1080" alt="Screenshot 2026-10-27 161059" src="https://github.com/user-attachments/assets/d82bde59-0f9b-4338-9341-00962fc483e5" />
+<img width="1920" height="1080" alt="Screenshot 2026-10-27 161059" src="https://github.com/user-attachments/assets/e16116ba-1455-41df-9469-05414ad81756" />
 
 ## Cmos Inverter Symbol      
-Convert the schematic to a symbol. A custom symbol is created in Xschem for the CMOS inverter subcircuit, with VDD, VIN, VOUT, and VSS pins for testbench integration.           
-<img width="1920" height="1080" alt="Screenshot 2026-10-28 184043" src="https://github.com/user-attachments/assets/3eeb203e-5687-47da-bb0e-289026403f1d" />
+Convert the schematic to a symbol.Using the symbol, we can create an independent test bench to simulate the circuit.   
+<img width="803" height="387" alt="Inverter_tb" src="https://github.com/user-attachments/assets/3bd01530-2004-4174-91dd-ea13aa7e83e7" />
 
-
-Using the symbol, we can create an independent test bench to simulate the circuit.   
-<img width="1920" height="1080" alt="Screenshot 2026-10-27 164553" src="https://github.com/user-attachments/assets/16fffcba-d832-4b38-827e-cde865135c04" />
 
 ## Creating and simulating testbench Schematic   
 The circuit can be simulated in ngspice.  
