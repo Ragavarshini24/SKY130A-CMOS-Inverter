@@ -164,7 +164,7 @@ netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inv
 |-------------------|----------------------|
 | Schematic Capture | Completed            |
 | Layout Design     | Created              |
-| DRC               | Zero errors reported |
+| DRC               | Zero errors          |
 | LVS Comparison    | Circuit matches      |
 
 
