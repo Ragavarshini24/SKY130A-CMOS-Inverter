@@ -153,7 +153,15 @@ LVS is performed using Netgen to verify that the physical layout matches the ori
 cd ../netgen
 netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inverter"
 ```
-<img width="1671" height="840" alt="lvs" src="https://github.com/user-attachments/assets/2e62da1f-616a-4806-b80b-1fb4774eb1ac" />                  
+<img width="1671" height="840" alt="lvs" src="https://github.com/user-attachments/assets/2e62da1f-616a-4806-b80b-1fb4774eb1ac" /> 
+
+## Post layout Simulation
+The extracted SPICE netlist was used to perform post-layout simulation with the SKY130A model library. The same supply voltage and input signals used in pre-layout simulation were applied.
+
+```bash
+ngspice postlayout_tb.spice
+```
+The pre-layout and post-layout waveforms were compared. Both showed the expected inverter operation, with the output opposite to the input.
 
 ## Results
 
@@ -173,4 +181,14 @@ netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inv
   
 -  The LVS verification will be carried out to ensure that the physical layout matches the original schematic, completing the CMOS inverter physical verification process.
 
+## References
+
+
+- [SKY130 PDK documentation](https://skywater-pdk.readthedocs.io/)
+- [Magic VLSI](http://opencircuitdesign.com/magic/)
+- [Netgen LVS](http://opencircuitdesign.com/netgen/)
+- [Xschem](https://github.com/StefanSchippers/xschem)
+- [ngspice documentation](https://ngspice.sourceforge.io/docs.html)
+- [open_pdks](https://github.com/RTimothyEdwards/open_pdks)
+- [Reference repository](https://github.com/ananyarf/VLSI-Physical-Verification-Sky130A)
 
