@@ -99,7 +99,7 @@ Checking if Xschem works
 ## Creating inverter schematic using xschem
 An initial schematic is made by placing components from the open_pdk library
 The required changes to the properties of the device can be made here and will automatically reflect in the layout  
-<img width="1920" height="1080" alt="Screenshot 2026-10-27 161059" src="https://github.com/user-attachments/assets/e16116ba-1455-41df-9469-05414ad81756" />
+<img width="763" height="411" alt="Inverter_sch" src="https://github.com/user-attachments/assets/f0e78b11-06a4-4e0a-b269-5abcb090e3b8" />
 
 ## Cmos Inverter Symbol      
 Convert the schematic to a symbol.Using the symbol, we can create an independent test bench to simulate the circuit.   
