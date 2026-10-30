@@ -96,19 +96,20 @@ Checking if Xschem works
 
 <img width="1920" height="1080" alt="Xschem_launch" src="https://github.com/user-attachments/assets/fa911b45-44d3-4512-b2d1-3c42ffcda9d9" />
 
-## Creating inverter schematic using xschem
-An initial schematic is made by placing components from the open_pdk library
-The required changes to the properties of the device can be made here and will automatically reflect in the layout  
-<img width="763" height="411" alt="Inverter_sch" src="https://github.com/user-attachments/assets/f0e78b11-06a4-4e0a-b269-5abcb090e3b8" />
+## Creating inverter schematic using xschem                     
+The CMOS inverter schematic was created using Xschem.                                          
+The circuit consists of an NMOS pull-down transistor and a PMOS pull-up transistor. Their gates form the input, and their drains form the output. The PMOS is connected to the VDD, while the NMOS is connected to VSS.                                          
+<img width="1672" height="941" alt="inverter" src="https://github.com/user-attachments/assets/a66e8265-3b88-4222-b60b-aba78afce3bf" />
 
 ## Cmos Inverter Symbol      
 Convert the schematic to a symbol.Using the symbol, we can create an independent test bench to simulate the circuit.   
-<img width="803" height="387" alt="Inverter_tb" src="https://github.com/user-attachments/assets/3bd01530-2004-4174-91dd-ea13aa7e83e7" />
+<img width="1672" height="870" alt="inveretr_testbench" src="https://github.com/user-attachments/assets/f6835415-00a6-4e87-bc00-ae6e99807e4c" />
 
 
 ## Creating and simulating testbench Schematic   
 The circuit can be simulated in ngspice.  
-<img width="872" height="445" alt="Schematic_simulation(ip vs op)" src="https://github.com/user-attachments/assets/a6c6f7f1-b2ab-4e82-99aa-ad5f20525b68" />
+Transient analysis was performed to observe how the output changes with respect to the input signal.                                            
+<img width="1599" height="842" alt="pre layout simulation" src="https://github.com/user-attachments/assets/88424922-0fef-460f-9276-f03c5c08c519" />
 
 ## Creating inverter layout in Magic and exporting its netlist   
 The original schematic can be used to export a netlist, which can be imported into magic to create the layout.    
@@ -161,6 +162,15 @@ netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inv
 | Schematic Capture | Completed            |
 | Layout Design     | Created              |
 | DRC               | Zero errors          |
-| LVS Comparison    | Circuit matches      |
+| LVS Comparison    | Circuit matches      |                            
+
+## Conclusion                
+- This project helped in understanding the design and physical verification process of a CMOS inverter using SKY130A technology.                 
+
+- The inverter schematic was created using Xschem, and its working operation was tested through transient analysis in NGSpice.                                 
+
+- The layout was designed using Magic VLSI and successfully completed the Design Rule Check (DRC) without any violations.
+  
+-  The LVS verification will be carried out to ensure that the physical layout matches the original schematic, completing the CMOS inverter physical verification process.
 
 
