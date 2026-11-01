@@ -106,7 +106,7 @@ Convert the schematic to a symbol.Using the symbol, we can create an independent
 <img width="1672" height="870" alt="inveretr_testbench" src="https://github.com/user-attachments/assets/f6835415-00a6-4e87-bc00-ae6e99807e4c" />
 
 
-## Creating and simulating testbench Schematic   
+## Pre-Layout Simulation Using NGSpice  
 The circuit can be simulated in ngspice.  
 Transient analysis was performed to observe how the output changes with respect to the input signal.                                            
 <img width="1599" height="842" alt="pre layout simulation" src="https://github.com/user-attachments/assets/88424922-0fef-460f-9276-f03c5c08c519" />
@@ -153,24 +153,75 @@ LVS is performed using Netgen to verify that the physical layout matches the ori
 cd ../netgen
 netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inverter"
 ```
-<img width="1671" height="840" alt="lvs" src="https://github.com/user-attachments/assets/2e62da1f-616a-4806-b80b-1fb4774eb1ac" /> 
+<img width="1671" height="840" alt="lvs" src="https://github.com/user-attachments/assets/2e62da1f-616a-4806-b80b-1fb4774eb1ac" />   
+
+### LVS Results  
+
+The report confirms:
+
+| Parameter | Layout | Schematic |
+|---|---:|---:|
+| PMOS devices | 1 | 1 |
+| NMOS devices | 1 | 1 |
+| Total devices | 2 | 2 |
+| Number of nets | 4 | 4 |
+
+### Final LVS Result
+
+```bash
+Circuit 1 contains 2 devices.
+Circuit 2 contains 2 devices.
+
+Circuit 1 contains 4 nets.
+Circuit 2 contains 4 nets.
+
+Final result:
+Circuits match uniquely.
+```
+Netgen successfully verified the inverter design. Both layout and schematic contain the same number of MOS transistors and electrical connections, indicating that the physical layout correctly represents the intended circuit.
+
 
 ## Post layout Simulation
-The extracted SPICE netlist was used to perform post-layout simulation with the SKY130A model library. The same supply voltage and input signals used in pre-layout simulation were applied.
+Once the DRC and LVS checks are completed successfully, the inverter is simulated again using NGSpice to verify its post-layout behavior.
+
+The SPICE netlist extracted from the Magic layout is used as the simulation input. This netlist accounts for layout-related parasitic capacitances, allowing the circuit's behavior to be evaluated more realistically than in the pre-layout simulation.
+
+The extracted netlist is included in the post-layout testbench along with the SKY130A model library, supply voltage, and input pulse source.
+
+The transient simulation is executed using NGSpice.
 
 ```bash
 ngspice postlayout_tb.spice
 ```
-The pre-layout and post-layout waveforms were compared. Both showed the expected inverter operation, with the output opposite to the input.
+<img width="1600" height="841" alt="post simulation" src="https://github.com/user-attachments/assets/bc0807fe-8785-4462-a683-2bac7fc33b95" />
+
+## Comparison of Pre-Layout and Post-Layout Simulation
+
+The table below presents the simulation setup and differences between the schematic-level and layout-extracted inverter designs.
+
+| **Criteria** | **Pre-Layout** | **Post-Layout** |
+|---|---|---|
+| Netlist Source | Xschem-generated SPICE file | Magic-extracted SPICE file |
+| Simulator | NGSpice | NGSpice |
+| Supply Voltage | 1.8 V | 1.8 V |
+| Input Voltage Range | 0–1.8 V | 0–1.8 V |
+| Parasitic Capacitances | Not extracted from layout | Included in extracted netlist |
+| Analysis Type | Transient Analysis | Transient Analysis |
+| Expected Output | Complementary inverter output | Complementary inverter output |
+
+The pre-layout simulation verifies the inverter using the schematic netlist, whereas the post-layout simulation evaluates its operation using the extracted physical layout netlist, including parasitic capacitances.
+
 
 ## Results
 
-| **Activity**      | **Result**           |
-|-------------------|----------------------|
-| Schematic Capture | Completed            |
-| Layout Design     | Created              |
-| DRC               | Zero errors          |
-| LVS Comparison    | Circuit matches      |                            
+| **Activity**          | **Result**           |
+|-----------------------|----------------------|
+| Schematic Capture     | Completed            |
+| Pre-layout simulation | Completed            |
+| Layout Design         | Created              |
+| DRC                   | Zero errors          |
+| LVS Comparison        | Circuit matches      |                            
+| Post-layout simulation| Completed            |
 
 ## Conclusion                
 - This project helped in understanding the design and physical verification process of a CMOS inverter using SKY130A technology.                 
